@@ -81,3 +81,138 @@
   filter: saturate(0.5) grayscale(0.7);
   transform: scale(1.5)
 }
+
+/* Esercizio 10 */
+@keyframes spin-circle {
+  0% {
+  transform: rotate(0);
+  }
+
+  100% {
+  transform: rotate(360deg);
+  }
+}
+
+.ex-10-icon {
+  animation-name: spin-circle;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Esercizio 11 */
+.ex-11-icon:hover {
+  animation-name: second-spin-circle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in;
+}
+
+@keyframes second-spin-circle {
+  0% {
+  transform: rotate(0);
+  }
+
+  50% {
+  transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+
+}
+
+/* Esercizio 12 */
+@keyframes border-spin-top {
+  0% {
+  transform: rotateX(0px);
+  }
+
+  50% {
+  transform: translateX(90px);
+  }
+
+  100% {
+  transform: translateX(-20px);
+
+  }
+}
+
+
+@keyframes border-spin-bottom {
+  0% {
+  transform: rotateX(0px);
+  }
+
+  50% {
+  transform: translateX(-90px);
+  }
+
+  100% {
+    transform: rotateX(20px);
+  }
+
+}
+
+ .ex-12-button:hover .ex-12-top-white {
+  animation-name: border-spin-top;
+  animation-duration: 3s;
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+  animation-name: border-spin-bottom;
+  animation-duration: 3s;
+}
+
+/* Esercizio 13 */
+
+@keyframes second-border-spin-top {
+  0% {
+  transform: rotateX(0%);
+  }
+
+  50% {
+  transform: translateX(100%);
+  }
+
+  75% {
+    transform: rotateY(0%);
+  }
+
+  80% {
+    transform: rotateY(100%);
+  }
+
+  100% {
+  transform: translateX(0%);
+
+  }
+}
+
+
+@keyframes second-border-spin-bottom {
+  0% {
+  transform: rotateX(0px);
+  }
+
+  50% {
+  transform: translateX(-100%);
+  }
+
+  100% {
+    transform: rotateX(0px);
+  }
+
+}
+
+ .ex-13-button:hover .ex-13-top-white {
+  animation-name: border-spin-top;
+  animation-duration: 3s;
+}
+
+.ex-13-button:hover .ex-13-bottom-white{
+  animation-name: border-spin-bottom;
+  animation-duration: 3s;
+}
