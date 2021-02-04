@@ -114,14 +114,13 @@
   transform: rotate(0);
   }
 
-  50% {
+  80% {
   transform: rotate(270deg);
   }
 
   100% {
     transform: rotate(0);
   }
-
 }
 
 /* Esercizio 12 */
@@ -136,7 +135,6 @@
 
   100% {
   transform: translateX(-20px);
-
   }
 }
 
@@ -153,7 +151,6 @@
   100% {
     transform: rotateX(20px);
   }
-
 }
 
  .ex-12-button:hover .ex-12-top-white {
@@ -170,49 +167,64 @@
 
 @keyframes second-border-spin-top {
   0% {
-  transform: rotateX(0%);
+  transform: translate(0, 0);
+  }
+
+  25% {
+  transform: translate(120px, 0);
   }
 
   50% {
-  transform: translateX(100%);
+  transform: translate(120px, 60px);
   }
 
   75% {
-    transform: rotateY(0%);
+  transform: translate(-30px, 60px);
   }
 
-  80% {
-    transform: rotateY(100%);
+  90% {
+  transform: translate(-30px, 0px);
   }
 
-  100% {
-  transform: translateX(0%);
-
+  100 % {
+    transform: translate(0, 0);
   }
 }
 
 
 @keyframes second-border-spin-bottom {
   0% {
-  transform: rotateX(0px);
+  transform: translate(0, 0);
+  }
+
+  25% {
+  transform: translate(-120px, 0);
   }
 
   50% {
-  transform: translateX(-100%);
+  transform: translate(-120px, -60px);
   }
 
-  100% {
-    transform: rotateX(0px);
+  75% {
+  transform: translate(50px, -60px);
+  }
+
+  90% {
+  transform: translate(70px, -0px);
+  }
+
+  100 % {
+    transform: translate(0, 0);
   }
 
 }
 
  .ex-13-button:hover .ex-13-top-white {
-  animation-name: border-spin-top;
+  animation-name: second-border-spin-top;
   animation-duration: 3s;
 }
 
 .ex-13-button:hover .ex-13-bottom-white{
-  animation-name: border-spin-bottom;
+  animation-name: second-border-spin-bottom;
   animation-duration: 3s;
 }
